@@ -12,7 +12,6 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
   _clear() {
-    console.log(this._parentElement);
     this._parentElement.innerHTML = '';
   }
   renderSpinner = function () {
