@@ -95,7 +95,6 @@ const controlAddRecipe = async function (newRecipe) {
 
     //upload the new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     //render recipe
     recipeView.render(model.state.recipe);
@@ -118,6 +117,10 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError(err.message);
   }
 };
+
+const newfeature = function () {
+  console.log('Welcome to the application');
+};
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipe);
@@ -126,5 +129,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  newfeature();
 };
 init();
